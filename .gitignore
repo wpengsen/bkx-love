@@ -17,4 +17,6 @@ unpackage/dist/dev/
 
 # hbuilderX
 hbuliderx/
-.hbuliderx/
+.hbuilderx/
+.idea/
+idea/

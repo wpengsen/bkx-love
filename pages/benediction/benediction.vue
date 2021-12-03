@@ -1,25 +1,24 @@
 <template>
-	<view class="u-page">
-		<u-list
-			@scrolltolower="scrolltolower"
-		>
-			<u-list-item
-				v-for="(item, index) in indexList"
-				:key="index"
-			>
-				<u-cell
-					:title="`列表长度-${index + 1}`"
-				>
-					<u-avatar
-						slot="icon"
-						shape="square"
-						size="35"
-						:src="item.url"
-						customStyle="margin: -3px 5px -3px 0"
-					></u-avatar>
-				</u-cell>
-			</u-list-item>
-		</u-list>
+	<view>
+		<!-- #ifdef MP-WEIXIN || MP-QQ || MP-BAIDU -->
+		<view class="u-demo-block">
+			<view class="u-demo-block__content">
+				<view class="u-avatar-item">
+					<u-avatar mpAvatar size="60"></u-avatar>
+				</view>
+			</view>
+		</view>
+		<!-- #endif -->
+		<view class="u-page">
+			<u-list @scrolltolower="scrolltolower">
+				<u-list-item v-for="(item, index) in indexList" :key="index">
+					<u-cell :title="`列表长度-${index + 1}`">
+						<u-avatar slot="icon" shape="square" size="35" :src="item.url"
+							customStyle="margin: -3px 5px -3px 0"></u-avatar>
+					</u-cell>
+				</u-list-item>
+			</u-list>
+		</view>
 	</view>
 </template>
 
